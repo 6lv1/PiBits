@@ -56,8 +56,8 @@
 
 #define DEFAULT_CYCLE_TIME_US	20000
 #define DEFAULT_STEP_TIME_US	10
-#define DEFAULT_SERVO_MIN_US	500
-#define DEFAULT_SERVO_MAX_US	2500
+#define DEFAULT_SERVO_MIN_US	1000
+#define DEFAULT_SERVO_MAX_US	2000
 
 #define DEVFILE			"/dev/servoblaster"
 #define CFGFILE			"/dev/servoblaster-cfg"
@@ -957,7 +957,7 @@ get_model_and_revision(void)
 
 	if (strstr(modelstr, "BCM2708"))
 		board_model = 1;
-	else if (strstr(modelstr, "BCM2709"))
+        else if (strstr(modelstr, "BCM2709") || strstr(modelstr, "BCM2835"))
 		board_model = 2;
 	else
 		fatal("servod: Cannot parse the hardware name string\n");
