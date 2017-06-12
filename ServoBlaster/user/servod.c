@@ -56,8 +56,8 @@
 
 #define DEFAULT_CYCLE_TIME_US	20000
 #define DEFAULT_STEP_TIME_US	10
-#define DEFAULT_SERVO_MIN_US	1000
-#define DEFAULT_SERVO_MAX_US	2000
+#define DEFAULT_SERVO_MIN_US	110
+#define DEFAULT_SERVO_MAX_US	190
 
 #define DEVFILE			"/dev/servoblaster"
 #define CFGFILE			"/dev/servoblaster-cfg"
